@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="info.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="link">
+            <a href="https://www.instagram.com/kendrick.samonte/">instagram</a>
+            <a href="https://www.linkedin.com/in/kendrick-samonte-205312295/">linkedin</a>
+            <a href="https://web.facebook.com/kendrick.samonte.5" target="_blank">facebook</a>
+            <a href="https://github.com/KendrickSamonte">github</a>
+        </div>
+
+        <div class="name">
+            <a href="/index.html"><h1> <span id="first">I'm</span> <span id="second">Ken</span>drick</h1></a>
+             <img id="first-pic" src="/images/main.png" alt="">
+             <img id="second-pic" src="/images/my pic.jpg">
+             <p>I'm an independent front-end web developer specializing on creating a website based on your desires.
+                My main goal is to always give my best in every project that I will be given and ensure that the client
+                will get the type of design that they desire.
+             </p>
+
+             <div class="work">
+                <a href="/work.html">•work</a>
+                <a href="#contact">•contact</a>
+                <a href="/index.html">•back</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="skills">
+            <div class="button" onclick="toggle()">menu</div>
+
+            <div class="menu">
+                <div class="button" onclick="togglec()">close</div>
+        
+                <ul class="ul">
+                    <li class="li1 li"><a href="/work.html">work</a></li>
+                    <li class="li2 li"><a href="/index.html">home</a></li>
+                    <li class="li3 li"><a href="/index.html">back</a></li>
+                    <div class="bg1 bg"></div>
+                    <div class="bg2 bg"></div>
+                    <div class="bg3 bg"></div>
+                </ul>
+                <div class="social">
+                    <ul>
+                    <li><a href="https://web.facebook.com/kendrick.samonte.5">facebook</a></li>
+                    <li ><a href="https://www.instagram.com/kendrick.samonte/">instagram</a></li>
+                    <li ><a href="https://www.linkedin.com/in/kendrick-samonte-205312295/">linkedin</a></li>
+                    <li ><a href="https://github.com/KendrickSamonte">github</a></li>
+                </ul>
+                </div>
+            </div>
+        
+        <div class="soft-skills">
+                <h1><span>(soft)</span>SKILLS</h1>
+            <div class="list">
+                <li> collaboration</li>
+                <li> communication</li>
+                <li> problem solving</li>
+                <li> time management</li>
+                <li> focused</li>
+                <li> hardworking</li>
+            </div>
+        </div>
+        <div class="key-skills">
+                <h1><span>(key)</span>SKILLS</h1>
+            <div class="list">
+                <li> Web developing</li>
+                <li> Ui Design</li>
+                <li> Ux design</li>
+                <li> GSAP animation</li>
+                <li> Html, css, bootstrap, Javascript</li>
+                <li> Parallax Design</li>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="motto">
+        <h1>THE DAY YOU STOP LEARNING, IS THE DAY YOU START DYING. </h1>
+            <p>never stop learning
+                <br> - Albert Einstein
+            </p>
+        <div>
+            <p>my motto</p>
+        </div>
+    </section>
+
+
+
+
+    <section id="contact">
+        <div class="marquee">
+            <span>
+                contact me /  contact me /  contact me /  contact me /  contact me /  contact me /  contact me /  contact me /
+                contact me /  contact me /  contact me /  contact me /  contact me /  contact me /
+                contact me /  contact me /  contact me /  contact me /  contact me /
+
+            </span>
+        </div>
+
+        <div class="contact-section">
+            <div class="contact-details col">
+                <p>
+                    Let's explore together the world of web developing
+                    and create awesome sites. <br>
+                    Reach out.
+                </p>
+
+                <div class="social-media item">
+                    <h3>social media</h3>
+                    <span>INSTAGRAM    -    FACEBOOK    -    LINKEDIN    -    GITHUB</span>
+                </div>
+
+                <div class="contact-info">
+                    <div class="email item">
+                        <h3>Get in touch</h3>
+                        <span>kendricksamonte0815@gmail.com</span>
+                    </div>
+
+                    <div class="address item">
+                        <h3>location</h3>
+                        <span>CEBU CITY - PHILIPPINES</span>
+                    </div>
+                </div>
+
+                <div class="contact-form col">
+                    <div class="wrapper">
+                        <form action="submit.php" method="post">
+                            <div class="row">
+                                <input type="text" placeholder="Name"/>
+                                <input type="text" placeholder="Budget"/>
+                            </div>
+                            <div class="row">
+                                <input type="text" placeholder="Email"/>
+                                <input type="text" placeholder="Company"/>
+                            </div>
+                            <div class="row">
+                                <textarea name="" 
+                                id="message"
+                                placeholder="message"
+                                rows="5">
+                                </textarea>
+                            </div>
+                            <div class="row submit">
+                                <a href="#">Submit<ion-icon name="arrow-round-forward"></ion-icon></a>
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+        <div class="cursor">
+        </div>
+
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script>
+        let cursor = document.querySelector(".cursor");
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.pageX +'px';
+            cursor.style.top = e.pageY +'px';
+        });
+    </script>
+    <script>
+    const first = document.querySelector('#first')
+    const firstPic = document.querySelector('#first-pic')
+    const second = document.querySelector('#second')
+    const secondPic = document.querySelector('#second-pic')
+    first.addEventListener("mouseover", _ => {
+        firstPic.style.display = "block", smooth
+    });
+    first.addEventListener("mouseout", _ => {
+        firstPic.style.display = "none"
+    });
+    second.addEventListener("mouseover", _ => {
+        secondPic.style.display = "block", smooth
+    });
+    second.addEventListener("mouseout", _ => {
+        secondPic.style.display = "none"
+    });
+    </script>
+     <script>
+        var tl = gsap.timeline({
+            paused: "true"
+        });
+        tl.to(".menu",{
+            duration: 1,
+            x: "0%",
+            ease: Expo.easeInOut
+        });
+        tl.fromTo(".li",{
+            y:"-100%",
+            opacity: 0
+        },{
+            duration: .5,
+            opacity: 1,
+            y: "0%",
+            stagger: 0.25
+        });
+        tl.fromTo(".social-li",{
+            y:"-50%",
+            opacity: 0
+        },{
+            duration:0.8,
+            opacity: 1,
+            stagger: 0.25,
+            ease: Expo.easeOut
+        },
+        "-=0.5");
+        
+        function toggle(){
+            tl.play();
+        }
+        function togglec(){
+            tl.reverse();
+        }
+
+    </script>
+
+
+        <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    </script>
+</body>
+</html>

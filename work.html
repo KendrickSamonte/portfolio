@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="work.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="button" onclick="toggle()">menu</div>
+
+        <div class="menu">
+            <div class="button" onclick="togglec()">close</div>
+    
+            <ul class="ul">
+                <li class="li1 li"><a href="/info.html">info</a></li>
+                <li class="li2 li"><a href="/index.html">home</a></li>
+                <li class="li3 li"><a href="/index.html">back</a></li>
+                <div class="bg1 bg"></div>
+                <div class="bg2 bg"></div>
+                <div class="bg3 bg"></div>
+            </ul>
+            <div class="social">
+                <ul>
+                    <li><a href="https://web.facebook.com/kendrick.samonte.5">facebook</a></li>
+                    <li ><a href="https://www.instagram.com/kendrick.samonte/">instagram</a></li>
+                    <li ><a href="https://www.linkedin.com/in/kendrick-samonte-205312295/">linkedin</a></li>
+                    <li ><a href="https://github.com/KendrickSamonte">github</a></li>
+            </ul>
+            </div>
+        </div>
+
+        <div class="title">
+            <h1><span>(work)</span>FOLIO</h1>
+        </div>
+
+    
+        <div class="thrill" data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="500">
+            <video  class="thrillVid" src="/videos/thrill website.mp4" playsinline width="600"></video>
+            <div class="text" >
+                <h1>THRILL WEBSITE</h1>
+                <p> It is an e-commerce website that I made for my friend's clothing business using html,<br> css and javascript.
+                It has a product page with a cart and checkout page  </p>
+            </div>  
+        </div>
+
+        <div class="iphone" data-aos="fade-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="500">
+            <div class="text">
+                <h1>iPHONE 15 LANDING PAGE</h1>
+                <p> I made an iPhone 15 landing page to showcase more the beauty of it. In order to achieve 
+                    <br> this 
+                    I used html, css, javascript and gsap animation with a little bit parallax effect.  </p>
+            </div>
+            <video  class="iphoneVid"src="/videos/iphone website.mp4" playsinline width="600"></video>
+        </div>
+
+        <div class="starbucks" data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="500">
+            <video class="starbucksVid" src="/videos/starbucks website.mp4" playsinline width="600"></video>
+            <div class="text">
+                <h1>STARBUCKS LANDING PAGE</h1>
+                <p>  I made a Starbucks landing page with a little twist to showcase more the beauty of it.<br> In order to achieve this 
+                    I used html, css, javascript and gsap animation with a little bit<br> parallax effect.  </p>
+        
+            </div>
+        </div>
+
+        <div class="momon" data-aos="fade-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="500">
+            <div class="text">
+                <h1 >MOMON WEBSITE</h1>
+                <p> I made a sample website for one of my favorite vlogger. It is a simple website that<br> contains
+                    parallax effect where images have view perspectives and moves according<br> to where your mouse points.
+                In order to achieve this, I used html, css, javascript and gsap  </p>
+            </div>
+            <video class="momonVid" src="/videos/momon website.mp4"  playsinline width="600"></video>
+        </div>
+
+        <div class="nike" data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="500">
+            <video  class="nikeVid" src="/videos/nike website.mp4" playsinline width="600"></video>
+            <div class="text">
+                <h1>NIKE WEBSITE REMAKE</h1>
+                <p> This is one the first projects that I made as I started my journey as a front end developer. 
+                   <br> I was able to copy 2 parts of nike website. The First page and the Jordan page. This is <br>one of
+                the foundations as to why I have loved front end developing   </p>
+            </div>
+        </div>
+
+        <div class="expense" data-aos="fade-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="500">
+            <div class="text">
+                <h1>EXPENSE TRACKER</h1>
+                <p> I created this website for my personal use so that I can track my personal expenses. It allows <br> you
+                    to save the data in local storage and see what is going on with your finances. It is a great <br> app
+                    for you not to lose track of your money  </p>
+            </div>
+            <video class="expenseVid" src="/videos/expense tracker.mp4" playsinline width="600"></video>
+        </div>
+        
+        <div class="cursor">
+        </div>
+    </div>
+
+
+
+        <script>
+            var tl = gsap.timeline({
+                paused: "true"
+            });
+            tl.to(".menu",{
+                duration: 1,
+                x: "0%",
+                ease: Expo.easeInOut
+            });
+            tl.fromTo(".li",{
+                y:"-100%",
+                opacity: 0
+            },{
+                duration: .5,
+                opacity: 1,
+                y: "0%",
+                stagger: 0.25
+            });
+            tl.fromTo(".social-li",{
+                y:"-50%",
+                opacity: 0
+            },{
+                duration:0.8,
+                opacity: 1,
+                stagger: 0.25,
+                ease: Expo.easeOut
+            },
+            "-=0.5");
+            
+            function toggle(){
+                tl.play();
+            }
+            function togglec(){
+                tl.reverse();
+            }
+    
+        </script>
+
+    <script>
+        let cursor = document.querySelector(".cursor");
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.pageX +'px';
+            cursor.style.top = e.pageY +'px';
+        });
+    </script>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+    <script src="script.js"></script>
+</body>
+</html>
